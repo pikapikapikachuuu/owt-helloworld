@@ -1,7 +1,7 @@
 project(helloworld)
 cmake_minimum_required(VERSION 3.0.0)
 
-set(CMAKE_BUILD_TYPE "Debug")
+set(CMAKE_BUILD_TYPE "Release")
 
 set(CMAKE_CXX_STANDARD 14)
 set(CMAKE_CXX_FLAGS "-Wall")
@@ -22,6 +22,8 @@ link_directories(
 
 add_executable(helloworld
   main.cpp
+  OwtSignalingChannel.cpp
+  OwtClient.cpp
 )
 
 target_link_libraries(helloworld

@@ -11,8 +11,8 @@ using namespace owt::p2p;
 class OwtSignalingChannel: public P2PSignalingChannelInterface {
 public:
   explicit OwtSignalingChannel();
-  virtual void AddObserver(
-  P2PSignalingChannelObserver& observer) override;
+  
+  virtual void AddObserver(P2PSignalingChannelObserver& observer) override;
   virtual void RemoveObserver(P2PSignalingChannelObserver& observer) override;
   virtual void Connect(const std::string& host, const std::string& token, 
     std::function<void(const std::string&)> on_success, std::function<void(std::unique_ptr<Exception>)> on_failure) override;
